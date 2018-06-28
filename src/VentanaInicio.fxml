@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VentanaInicioController">
+   <children>
+      <Separator layoutX="165.0" orientation="VERTICAL" prefHeight="540.0" prefWidth="2.0" />
+      <Separator layoutX="1.0" layoutY="82.0" prefHeight="4.0" prefWidth="744.0" />
+      <Pane layoutX="-6.0" layoutY="82.0" prefHeight="462.0" prefWidth="172.0" style="-fx-background-color: #7481D6;">
+         <children>
+            <Label layoutX="36.0" layoutY="14.0" text="Navegación" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="36.0" layoutY="74.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#mostrarDescAction" style="-fx-background-color: #7481D6;" text="Inicio" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="25.0" layoutX="18.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/inicio.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="36.0" layoutY="146.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#insertarStockAction" style="-fx-background-color: #7481D6;" text="Inventario" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="25.0" layoutX="18.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/stock.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="36.0" layoutY="215.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#insertarReqAction" style="-fx-background-color: #7481D6;" text="Cortar" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="25.0" layoutX="18.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/corte.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="-6.0" layoutY="-2.0" prefHeight="84.0" prefWidth="172.0" style="-fx-background-color: #5661A6;">
+         <children>
+            <ImageView fitHeight="84.0" fitWidth="82.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="165.0" layoutY="82.0" prefHeight="462.0" prefWidth="581.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TabPane fx:id="tabPane" layoutX="-1.0" layoutY="-32.0" prefHeight="494.0" prefWidth="581.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Descripcion">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="20.0" style="-fx-text-fill: black;" text="Descripción" textFill="#132972">
+                                 <font>
+                                    <Font name="Candara Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="64.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Separator layoutY="20.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Label layoutX="59.0" layoutY="98.0" prefHeight="17.0" prefWidth="482.0" text="A nivel industrial, en los procesos de cortes existe una gran pérdida de " textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="115.0" prefHeight="17.0" prefWidth="482.0" text="recursos en la merma generada, sea papel, madera, vidrio, metal, etc.," textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="132.0" prefHeight="17.0" prefWidth="482.0" text="cuyo valor reciclable es menor al valor del producto final. " textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="200.0" fitWidth="300.0" layoutX="282.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/barras.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="20.0" layoutY="180.0" style="-fx-text-fill: black;" text="Integrantes" textFill="#132972">
+                                 <font>
+                                    <Font name="Candara Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="180.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Separator layoutY="224.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Label layoutX="59.0" layoutY="260.0" prefHeight="17.0" prefWidth="271.0" text="Gonzales Marca, Mijail" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="285.0" prefHeight="17.0" prefWidth="271.0" text="Pecho Barreto, Jose" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="310.0" prefHeight="17.0" prefWidth="271.0" text="Pernia Meza, Iver" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="335.0" prefHeight="17.0" prefWidth="271.0" text="Rodriguez Urbano, Anyi" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="360.0" prefHeight="17.0" prefWidth="271.0" text="Tomairo Huamanraime, Juan" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Inventario">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="581.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="20.0" style="-fx-text-fill: black;" text="Registrar barras" textFill="#132972">
+                                 <font>
+                                    <Font name="Candara Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="64.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Label layoutX="27.0" layoutY="153.0" style="-fx-text-fill: black;" text="Stock actual" textFill="#132972">
+                                 <font>
+                                    <Font name="Candara Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="7.0" layoutY="197.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Separator layoutX="7.0" layoutY="153.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Separator layoutY="20.0" prefHeight="4.0" prefWidth="581.0" />
+                              <TableView id="tablaInventario" fx:id="tablaInventario" layoutX="50.0" layoutY="209.0" opacity="0.98" prefHeight="234.0" prefWidth="490.0" styleClass="table-cell">
+                                <columns>
+                                  <TableColumn id="columnaLong" fx:id="columnaLong" prefWidth="326.0" text="Longitud (m)" />
+                                  <TableColumn id="columnaNum" fx:id="columnaNum" prefWidth="138.0" text="Cantidad" />
+                                </columns>
+                              </TableView>
+                              <TextField id="txtIngreso" fx:id="txtIngreso" layoutX="100.0" layoutY="97.0" promptText="Longitud">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Button id="botonAgregar" fx:id="botonAgregar" layoutX="520.0" layoutY="93.0" mnemonicParsing="false" onAction="#agregarInventarioAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/mas.jpg" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField id="txtIngreso" fx:id="txtCantidad" layoutX="274.0" layoutY="97.0" prefHeight="25.0" prefWidth="91.0" promptText="Cantidad">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Button id="botonAgregar" fx:id="botonEliminar" layoutX="513.0" layoutY="158.0" mnemonicParsing="false" onAction="#eliminarAction" prefHeight="13.0" prefWidth="54.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/papelera.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="434.0" layoutY="170.0" text="Vaciar inventario" textFill="#1100ff">
+                                 <font>
+                                    <Font name="Candara" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="434.0" layoutY="102.0" text="Registrar barra" textFill="#1100ff">
+                                 <font>
+                                    <Font name="Candara" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Cortar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="20.0" style="-fx-text-fill: black;" text="Requerimientos de cortes" textFill="#132972">
+                                 <font>
+                                    <Font name="Candara Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="64.0" prefHeight="4.0" prefWidth="581.0" />
+                              <Separator layoutY="20.0" prefHeight="4.0" prefWidth="581.0" />
+                              <TableView id="tablaRequerimiento" fx:id="tablaRequerimiento" editable="true" layoutX="67.0" layoutY="126.0" prefHeight="248.0" prefWidth="447.0">
+                                <columns>
+                                  <TableColumn id="colReqLongitud" fx:id="colReqLongitud" prefWidth="231.0" text="Longitud (m)" />
+                                  <TableColumn id="colReqCantidad" fx:id="colReqCantidad" prefWidth="153.0" text="Cantidad" />
+                                    <TableColumn id="colReqBoton" fx:id="colReqBoton" editable="false" prefWidth="59.0" style="-fx-background-color: transparent;" />
+                                </columns>
+                              </TableView>
+                              <Button id="iniciarCorteAction" layoutX="259.0" layoutY="392.0" mnemonicParsing="false" onAction="#iniciarCorteAction" text="Iniciar Corte" />
+                              <TextField id="txtLongitudReq" fx:id="txtLongitudReq" layoutX="74.0" layoutY="85.0" promptText="Longitud">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Button id="botonAgregar" fx:id="botonAgregar1" layoutX="481.0" layoutY="83.0" mnemonicParsing="false" onAction="#agregarRequerimientoAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/mas.jpg" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField id="txtCantidadReq" fx:id="txtCantidadReq" layoutX="236.0" layoutY="86.0" prefHeight="25.0" prefWidth="91.0" promptText="Cantidad">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label layoutX="350.0" layoutY="91.0" text="Registrar requerimiento" textFill="#1100ff">
+                                 <font>
+                                    <Font name="Candara" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>
+      <Pane layoutX="164.0" layoutY="-2.0" prefHeight="84.0" prefWidth="581.0" style="-fx-background-color: #D2D2D6;">
+         <children>
+            <Label layoutX="126.0" layoutY="19.0" text="CutList 1D Optimizer" textFill="#132972">
+               <font>
+                  <Font name="Candara Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

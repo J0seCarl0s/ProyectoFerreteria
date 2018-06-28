@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ResultadosController">
+    <children>
+      <HBox layoutX="35.0" layoutY="29.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="537.0" prefWidth="614.0">
+               <children>
+                  <Pane prefHeight="178.0" prefWidth="610.0" style="-fx-background-color: #7481D6;">
+                     <children>
+                        <TableView id="tablaResultado" fx:id="tablaResultado" layoutX="-1.0" layoutY="1.0" prefHeight="179.0" prefWidth="610.0">
+                          <columns>
+                            <TableColumn id="columnaBarra" fx:id="columnaBarra" prefWidth="96.0" text="Barra" />
+                            <TableColumn id="columnaCortes" fx:id="columnaCortes" prefWidth="265.0" text="Cortes" />
+                              <TableColumn id="columnaSobrante" fx:id="columnaSobrante" prefWidth="107.0" text="Sobrante" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <ScrollPane prefHeight="373.0" prefWidth="610.0">
+                     <content>
+                        <Pane id="panelDibujo" fx:id="panelDibujo" prefHeight="365.0" prefWidth="605.0">
+                           <children>
+                              <Group id="root" fx:id="root" layoutX="111.0" layoutY="98.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
